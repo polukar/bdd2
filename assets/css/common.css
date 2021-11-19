@@ -1007,6 +1007,11 @@ h6 {
   vertical-align: middle;
 }
 
+.svgsprite._logo {
+  width: 413px;
+  height: 145px;
+}
+
 .svgsprite._menu {
   width: 24px;
   height: 17px;
@@ -1015,6 +1020,11 @@ h6 {
 .svgsprite._menu-close {
   width: 19px;
   height: 19px;
+}
+
+.svgsprite._select {
+  width: 18px;
+  height: 11px;
 }
 
 .svgsprite._soc-1 {
@@ -1273,6 +1283,28 @@ h6 {
   border: 3px solid #fff;
   justify-content: center;
   align-items: center;
+}
+
+.header-inner {
+  height: 120px;
+  background: url(../img/main.png) no-repeat center bottom/cover;
+  padding-top: 17px;
+}
+
+.header-inner .container {
+  flex-wrap: nowrap;
+}
+
+.header-inner .header__right {
+  flex-wrap: nowrap;
+  align-self: flex-start;
+  padding-top: 18px;
+}
+
+.header-inner .enter {
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
 }
 
 .main {
@@ -1598,6 +1630,270 @@ h6 {
   text-transform: uppercase;
 }
 
+.inner {
+  padding-top: 90px;
+  padding-bottom: 160px;
+  min-height: calc(100vh - 120px);
+}
+
+.btn-submit {
+  padding-top: 30px;
+}
+
+.input__name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.input__name.req:after {
+  content: "*";
+  color: #ED6F4F;
+}
+
+.form__white,
+.form__green {
+  padding-left: 155px;
+}
+
+.form__green {
+  background-color: rgba(76, 178, 120, 0.1);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.form__green .form__block:last-child {
+  margin-bottom: 0px;
+}
+
+.form__block {
+  max-width: 742px;
+}
+
+.form__block--line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form__block--line .input__name {
+  width: 306px;
+  margin-bottom: 0px;
+}
+
+.form__block--line .input,
+.form__block--line .select {
+  width: calc(100% - 306px);
+  margin-bottom: 0px;
+}
+
+.form__block--line .input input,
+.form__block--line .input .input,
+.form__block--line .select input,
+.form__block--line .select .input {
+  width: 100%;
+}
+
+.form__block--sqare .input__name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input.--error input {
+  color: #fff;
+  border-color: #ED6F4F;
+}
+
+.input.--succed input {
+  color: #fff;
+  border-color: #005BDE;
+}
+
+.input input:focus {
+  border: 3px solid #005BDE;
+  font-weight: 600;
+}
+
+.input input {
+  font-size: 20px;
+  color: #005BDE;
+  padding-left: 20px;
+  padding-right: 40px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #005BDE;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.error__message {
+  margin-top: 10px;
+  color: #ED6F4F;
+  display: none;
+}
+
+.--error .error__message {
+  display: block;
+}
+
+.select__main {
+  position: relative;
+}
+
+.select__main input {
+  cursor: pointer;
+}
+
+.select__main.active:after {
+  transform: translateY(-50%) rotateZ(180deg);
+}
+
+.select__main:after {
+  content: "";
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(0);
+  width: 17px;
+  height: 10px;
+  background: url(../img/select.svg) no-repeat center/contain;
+  transition: .4s;
+}
+
+.select__drop {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  margin-top: 10px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  background-color: #fff;
+  z-index: 200;
+  display: none;
+}
+
+.select__item {
+  padding: 5px 10px;
+}
+
+.select__item:hover {
+  background-color: #005BDE;
+  color: #fff;
+}
+
+.footer {
+  background: url(../img/footer.jpg) no-repeat top center/cover;
+  padding-top: 47px;
+  padding-bottom: 20px;
+}
+
+.inner__cont {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: url(../img/form-bg.jpg);
+}
+
+.inner__cont-top {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.inner__cont-bottom {
+  width: 100%;
+  align-self: flex-end;
+}
+
+.inner__cont-bottom.no-footer .footer__wrap {
+  padding-bottom: 27px;
+  padding-top: 27px;
+}
+
+.form__panel {
+  background-color: #fff;
+  padding: 74px 70px;
+  max-width: 500px;
+  margin: 50px auto 0;
+  border-radius: 14px;
+  width: calc(100% - 40px);
+}
+
+.form__panel .input {
+  max-width: 356px;
+  margin: 0 auto 30px;
+}
+
+.form__panel.--password {
+  max-width: 668px;
+}
+
+.form__panel.--password .btn-center {
+  padding-top: 30px;
+}
+
+.form__panel.--recover {
+  max-width: 668px;
+}
+
+.form__panel .btn.--green {
+  width: 100%;
+  max-width: 254px;
+}
+
+.form__links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.form__links a {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #06C358;
+  text-decoration: underline;
+}
+
+.form__descriprion {
+  margin-top: -22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form__help {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #06C358;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1400px) {
+  .header__logo {
+    max-width: 250px;
+  }
+
+  .header-inner .nav__link {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 1300px) {
   .main__text p {
     max-width: 460px;
@@ -1632,6 +1928,15 @@ h6 {
 
   .nav__link {
     font-size: 16px;
+  }
+
+  .header-inner .nav {
+    margin-right: 30px;
+  }
+
+  .header-inner .enter {
+    width: 170px;
+    font-size: 14px;
   }
 }
 
@@ -1830,6 +2135,22 @@ h6 {
     height: auto;
     padding-top: 58px;
   }
+
+  .form__white,
+  .form__green {
+    padding-left: 0px;
+  }
+
+  .form__descriprion {
+    margin-top: 0px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .form__help {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1907,6 +2228,44 @@ h6 {
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
+  }
+
+  .form__panel.--password .btn-center {
+    padding-top: 10px;
+  }
+
+  .form__panel {
+    padding: 37px 22px 57px;
+  }
+
+  .form__block--line {
+    display: block;
+  }
+
+  .form__block--line .input__name {
+    margin-bottom: 15px;
+  }
+
+  .input__name {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .form__block--line .input,
+  .form__block--line .select {
+    width: 100%;
+  }
+
+  .header__logo {
+    padding-right: 10px;
+  }
+
+  .header-inner {
+    height: 90px;
+  }
+
+  .header-inner .header__right {
+    padding-top: 0px;
   }
 }
 
