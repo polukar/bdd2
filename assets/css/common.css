@@ -1162,6 +1162,11 @@ h6 {
   line-height: 30px;
 }
 
+.btn.--white {
+  border: 2px solid #FFFFFF;
+  color: #fff;
+}
+
 .btn-center {
   display: flex;
   justify-content: center;
@@ -1211,11 +1216,63 @@ h6 {
 }
 
 .mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: linear-gradient(180deg, #0047AD 0%, #0060EC 100%);
+  padding-top: 120px;
+  overflow-y: auto;
   display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu .nav {
+  margin-bottom: 60px;
+  margin-right: 0px;
+}
+
+.mobile-menu .nav__link {
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 26px;
+  display: block;
+  text-align: center;
+  margin-right: 0px;
+}
+
+.mobile-menu .nav__link.active {
+  color: #fff;
+}
+
+.mobile-menu .enter,
+.mobile-menu .btn {
+  margin: 0 auto 16px;
+  display: flex;
+  width: 100%;
+  max-width: 360px;
+}
+
+.mobile-menu .burger {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .burger {
   display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 3px solid #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -1227,11 +1284,20 @@ h6 {
 .main__wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main__wrap .btn-center {
+  width: 100%;
 }
 
 .main__content {
   width: calc(100% - 465px);
   text-align: right;
+}
+
+.main__content .btn-center {
+  display: none;
 }
 
 .main__content .link {
@@ -1532,9 +1598,330 @@ h6 {
   text-transform: uppercase;
 }
 
+@media (max-width: 1300px) {
+  .main__text p {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .footer__wrap {
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    order: 1;
+    width: 50%;
+    padding-top: 30px;
+    max-width: 100%;
+  }
+
+  .political {
+    order: 1;
+    width: 50%;
+    text-align: right;
+    padding-top: 26px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__logo {
+    transform: none;
+    margin-bottom: 40px;
+  }
+
+  .nav__link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 980px) {
+  .h2 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .header {
+    padding-top: 20px;
+  }
+
+  .header__right .nav {
+    display: none;
+  }
+
+  .header__right .enter {
+    display: none;
+  }
+
+  .header__right .burger {
+    display: flex;
+  }
+
+  .main {
+    padding-top: 21px;
+  }
+
+  .main__logo {
+    max-width: 320px;
+    margin-bottom: 62px;
+  }
+
+  .main__wrap .btn-center {
+    display: none;
+  }
+
+  .main__content {
+    text-align: left;
+  }
+
+  .main__content .btn-center {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .main__wrap .btn-center .btn {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  .main__wrap .btn-center span {
+    display: none;
+  }
+
+  .main__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main__content .link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .main__text {
+    width: 100%;
+    order: -1;
+    display: block;
+    padding-top: 0px;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .about:after {
+    display: none;
+  }
+
+  .about__text p {
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 0px;
+  }
+
+  .about {
+    padding: 27px 0;
+  }
+
+  .timer {
+    padding-top: 33px;
+    padding-bottom: 39px;
+  }
+
+  .timer__panel {
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 86px;
+  }
+
+  .timer__panel .h2 {
+    color: #fff;
+  }
+
+  .timer__description {
+    font-size: 16px;
+    margin-bottom: 70px;
+    font-weight: bold;
+    color: #003B6A;
+  }
+
+  .timer__block {
+    background-color: #fff;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    border-radius: 16px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .timer__number {
+    font-size: 54px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .timer__text {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .timer__item--center {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .timer__item--center .timer__number:after {
+    margin-left: 17px;
+  }
+
+  .timer__item--center .timer__number:before {
+    margin-right: 17px;
+  }
+
+  .caleandar__list {
+    flex-wrap: wrap;
+  }
+
+  .calendar__item {
+    width: calc(50% - 30px);
+    margin-bottom: 80px;
+    padding-bottom: 34px;
+    border-radius: 16px;
+  }
+
+  .calendar__item:nth-child(1) {
+    background-color: rgba(76, 178, 120, 0.1);
+  }
+
+  .calendar__item:nth-child(2) {
+    background-color: rgba(76, 178, 120, 0.1);
+  }
+
+  .calendar__item:nth-child(3) {
+    background-color: rgba(248, 203, 123, 0.31);
+  }
+
+  .calendar__item:nth-child(4) {
+    background-color: rgba(237, 111, 79, 0.34);
+  }
+
+  .calendar__item:nth-child(1) .calendar__panel {
+    background-color: transparent;
+  }
+
+  .calendar__item:nth-child(2) .calendar__panel {
+    background-color: transparent;
+  }
+
+  .calendar__item:nth-child(3) .calendar__panel {
+    background-color: transparent;
+  }
+
+  .calendar__item:nth-child(4) .calendar__panel {
+    background-color: transparent;
+  }
+
+  .calendar__item .calendar__panel {
+    height: auto;
+    padding-top: 58px;
+  }
+}
+
 @media (max-width: 768px) {
+  .btn {
+    font-size: 18px;
+    width: 100%;
+  }
+
   .btn span {
     display: none;
+  }
+
+  .calendar__item {
+    width: calc(100% - 30px);
+  }
+
+  .calendar {
+    padding-bottom: 0px;
+  }
+
+  .organizations__panels {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .organizations__panel,
+  .organizations__panel:first-child,
+  .organizations__panel:last-child {
+    margin: 0 auto 20px;
+  }
+
+  .footer__lk {
+    width: 100%;
+    order: -1;
+    text-align: center;
+    margin-bottom: 49px;
+  }
+
+  .footer__lk a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .socilas {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .political {
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+    max-width: 100%;
+    order: 0;
+    margin-bottom: 50px;
+  }
+
+  .copyright {
+    padding-top: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6BA8FF;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 530px) {
+  .main__wrap .btn-center .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main__content .link {
+    text-align: center;
+  }
+
+  .main {
+    padding-bottom: 20px;
   }
 }
 
