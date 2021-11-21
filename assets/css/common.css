@@ -1973,24 +1973,29 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .score__point .score__number {
   display: none;
 }
 
-.score__point:before {
+.score__point input {
+  display: none;
+}
+
+.score__point input:checked + span {
+  background-color: #2CE77D;
+  border-color: #2CE77D;
+}
+
+.score__point span {
   content: "";
   position: relative;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   border: 2px solid #A2A6AB;
-}
-
-.score__item.active .score__point:before {
-  background-color: #2CE77D;
-  border-color: #2CE77D;
 }
 
 .score__body {
@@ -2948,7 +2953,7 @@ h6 {
     padding-top: 10px;
   }
 
-  .score__point:before {
+  .score__point span {
     width: 16px;
     height: 16px;
   }
